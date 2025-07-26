@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Center, Text3D, Html } from "@react-three/drei";
 import { useTheme } from "../contexts/ThemeContext";
 import * as THREE from "three";
+import helvetiker_regular from "../fonts/helvetiker_regular.typeface.json";
 
 interface SkillTextProps {
   skill: string;
@@ -78,7 +79,7 @@ const SkillText: React.FC<SkillTextProps> = ({
       <Center>
         <Text3D
           ref={meshRef}
-          font="/fonts/helvetiker_regular.typeface.json"
+          font={helvetiker_regular as any}
           size={0.5}
           height={0.15}
           curveSegments={12}

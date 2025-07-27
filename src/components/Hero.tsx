@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="hero"
+      className="hero section"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           {/* Greeting */}
           <div
             style={{
-              fontSize: "1.125rem",
+              fontSize: "1.125em",
               color: "var(--text-accent)",
               fontWeight: "500",
               marginBottom: "1rem",
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           {/* Name */}
           <h1
             style={{
-              fontSize: "4rem",
+              fontSize: "4em",
               fontWeight: "700",
               color: "var(--text-primary)",
               marginBottom: "1rem",
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
           {/* Title */}
           <h2
             style={{
-              fontSize: "2rem",
+              fontSize: "2em",
               fontWeight: "600",
               color: "var(--text-secondary)",
               marginBottom: "2rem",
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
           {/* Description */}
           <p
             style={{
-              fontSize: "1.25rem",
+              fontSize: "1.25em",
               color: "var(--text-secondary)",
               marginBottom: "3rem",
               lineHeight: "1.6",

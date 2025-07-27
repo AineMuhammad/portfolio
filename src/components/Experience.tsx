@@ -69,6 +69,9 @@ const Experience: React.FC = () => {
                 position: "relative",
                 borderLeft: "4px solid var(--text-accent)",
                 paddingLeft: "2rem",
+                paddingRight: "2rem",
+                paddingTop: "2.5rem",
+                paddingBottom: "2.5rem",
               }}
             >
               {/* Timeline dot */}

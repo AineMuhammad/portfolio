@@ -318,7 +318,7 @@ const Skills3D: React.FC = () => {
     <section
       id="skills3d"
       className="section skills-section"
-      style={{ position: "relative", overflow: "hidden", width: "98vw" }}
+      style={{ position: "relative", overflow: "hidden" }}
     >
       <div className="container">
         <h2 className="section-title">Skills</h2>

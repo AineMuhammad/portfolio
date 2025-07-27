@@ -23,7 +23,7 @@ const About: React.FC = () => {
           <div>
             <h3
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.5em",
                 fontWeight: "600",
                 color: "var(--text-primary)",
                 marginBottom: "1.5rem",
@@ -36,7 +36,7 @@ const About: React.FC = () => {
               style={{
                 color: "var(--text-secondary)",
                 lineHeight: "1.8",
-                fontSize: "1.125rem",
+                fontSize: "1.125em",
               }}
             >
               <p style={{ marginBottom: "1.5rem" }}>
@@ -75,7 +75,7 @@ const About: React.FC = () => {
             <div className="card">
               <h4
                 style={{
-                  fontSize: "1.25rem",
+                  fontSize: "1.25em",
                   fontWeight: "600",
                   color: "var(--text-primary)",
                   marginBottom: "1rem",
@@ -98,7 +98,7 @@ const About: React.FC = () => {
                   <strong>SUNY Albany</strong> — Masters in Computer Science (AI
                   Major)
                 </p>
-                <p>August 2024 - Present</p>
+                <p>August 2025 - Present</p>
                 <p>
                   <strong>NUST, Islamabad</strong> — Bachelors of Software
                   Engineering
@@ -112,7 +112,7 @@ const About: React.FC = () => {
             <div className="card">
               <h4
                 style={{
-                  fontSize: "1.25rem",
+                  fontSize: "1.25em",
                   fontWeight: "600",
                   color: "var(--text-primary)",
                   marginBottom: "1rem",
@@ -135,7 +135,7 @@ const About: React.FC = () => {
                       color: "var(--text-primary)",
                       padding: "0.5rem 1rem",
                       borderRadius: "2rem",
-                      fontSize: "0.875rem",
+                      fontSize: "0.875em",
                       fontWeight: "500",
                     }}
                   >
@@ -149,7 +149,7 @@ const About: React.FC = () => {
             <div className="card">
               <h4
                 style={{
-                  fontSize: "1.25rem",
+                  fontSize: "1.25em",
                   fontWeight: "600",
                   color: "var(--text-primary)",
                   marginBottom: "1rem",
@@ -167,7 +167,7 @@ const About: React.FC = () => {
                 <div style={{ textAlign: "center" }}>
                   <div
                     style={{
-                      fontSize: "2rem",
+                      fontSize: "2em",
                       fontWeight: "700",
                       color: "var(--text-accent)",
                     }}
@@ -176,7 +176,7 @@ const About: React.FC = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "0.875rem",
+                      fontSize: "0.875em",
                       color: "var(--text-secondary)",
                     }}
                   >
@@ -186,7 +186,7 @@ const About: React.FC = () => {
                 <div style={{ textAlign: "center" }}>
                   <div
                     style={{
-                      fontSize: "2rem",
+                      fontSize: "2em",
                       fontWeight: "700",
                       color: "var(--text-accent)",
                     }}
@@ -195,7 +195,7 @@ const About: React.FC = () => {
                   </div>
                   <div
                     style={{
-                      fontSize: "0.875rem",
+                      fontSize: "0.875em",
                       color: "var(--text-secondary)",
                     }}
                   >

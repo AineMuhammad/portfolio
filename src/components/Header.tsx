@@ -35,15 +35,6 @@ const Header: React.FC = () => {
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            color: "#b6bedc",
-            fontSize: "1.5rem",
-            cursor: "pointer",
-            padding: "0.5rem",
-          }}
         >
           ☰
         </button>
@@ -51,26 +42,14 @@ const Header: React.FC = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            right: 0,
-            background: "rgba(16, 19, 26, 0.98)",
-            backdropFilter: "blur(24px)",
-            borderTop: "1px solid rgba(80, 90, 120, 0.12)",
-            padding: "1rem 0",
-          }}
-        >
+        <div className="mobile-menu">
           <div className="container">
-            <nav style={{ flexDirection: "column", gap: "0.5rem" }}>
+            <nav>
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  style={{ padding: "0.75rem 1rem" }}
                 >
                   {item.name}
                 </a>

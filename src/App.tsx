@@ -1,50 +1,75 @@
-import React, { useState, useEffect } from "react";
-import { ThemeProvider } from "./contexts/ThemeContext";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Skills3D from "./components/Skills3D";
-import Contact from "./components/Contact";
-import Background3D from "./components/Background3D";
+import React, { useCallback, useEffect, useState } from "react";
+import AmbientBackground from "./architect/AmbientBackground";
+import Nav from "./architect/Nav";
+import Hero from "./architect/Hero";
+import CapabilitiesBento from "./architect/CapabilitiesBento";
+import StatsStrip from "./architect/StatsStrip";
+import ProjectsBento from "./architect/ProjectsBento";
+import ExperienceTimeline from "./architect/ExperienceTimeline";
+import ContactSection from "./architect/ContactSection";
+import Footer from "./architect/Footer";
+import Reveal from "./interactive/Reveal";
+import SectionRail from "./interactive/SectionRail";
+import CommandPalette from "./interactive/CommandPalette";
+import TerminalDrawer from "./interactive/TerminalDrawer";
+import { useActiveChapter } from "./hooks/useActiveChapter";
 
 function App() {
-  // Remove loading screen logic
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [terminalOpen, setTerminalOpen] = useState(false);
+  const activeChapter = useActiveChapter();
 
-  // if (isLoading) {
-  //   return (
-  //     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
-  //       <div style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-  //         Loading Portfolio...
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  const togglePalette = useCallback(() => {
+    setPaletteOpen((v) => !v);
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        togglePalette();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [togglePalette]);
 
   return (
-    <ThemeProvider>
-      <div className="App">
-        <Background3D />
-        <Header />
-        <main>
+    <div className="min-h-screen bg-background font-body text-on-background selection:bg-primary/30 selection:text-on-primary-container">
+      <AmbientBackground />
+      <Nav onOpenTerminal={() => setTerminalOpen(true)} />
+      <SectionRail active={activeChapter} />
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+      />
+      <TerminalDrawer
+        open={terminalOpen}
+        onClose={() => setTerminalOpen(false)}
+      />
+
+      <main className="relative pt-24">
+        <Reveal>
           <Hero />
-          <About />
-          <Experience />
-          <Skills />
-          <Skills3D />
-          {/* <Projects /> */}
-          <Contact />
-        </main>
-      </div>
-    </ThemeProvider>
+        </Reveal>
+        <Reveal delayMs={80}>
+          <CapabilitiesBento />
+        </Reveal>
+        <Reveal delayMs={120}>
+          <StatsStrip />
+        </Reveal>
+        <Reveal delayMs={80}>
+          <ProjectsBento />
+        </Reveal>
+        <Reveal delayMs={100}>
+          <ExperienceTimeline />
+        </Reveal>
+        <Reveal delayMs={80}>
+          <ContactSection />
+        </Reveal>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

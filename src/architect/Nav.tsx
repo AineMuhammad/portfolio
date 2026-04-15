@@ -47,7 +47,7 @@ const Nav: React.FC<NavProps> = ({ onOpenTerminal }) => {
           terminal
         </button>
         <MagneticButton
-          href="/resume.pdf"
+          href="/Portfolio/Resume.pdf"
           download
           className="accent-glow inline-flex rounded-none bg-gradient-to-r from-primary to-secondary px-3 py-2 font-headline text-xs font-bold uppercase tracking-widest text-on-primary-container sm:px-5"
         >

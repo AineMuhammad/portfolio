@@ -80,7 +80,7 @@ const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
         case "resume":
           {
             const a = document.createElement("a");
-            a.href = "/resume.pdf";
+            a.href = "/Portfolio/Resume.pdf";
             a.download = "";
             a.click();
           }

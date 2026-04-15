@@ -70,7 +70,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
         label: "Open resume (download)",
         run: () => {
           const a = document.createElement("a");
-          a.href = "/resume.pdf";
+          a.href = "/Portfolio/Resume.pdf";
           a.download = "";
           a.click();
           onClose();

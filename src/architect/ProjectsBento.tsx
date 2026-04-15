@@ -47,8 +47,8 @@ const ProjectsBento: React.FC = () => {
             </span>
           </h2>
           <p className="mb-8 max-w-xl font-body text-lg leading-relaxed text-on-surface-variant">
-            Full-stack apps and admin tools—CSV pipelines, RBAC, analytics, and
-            secure media workflows—not vaporware demos.
+            Full-stack apps and admin tools - CSV pipelines, RBAC, analytics, and
+            secure media workflows - not vaporware demos.
           </p>
 
           <div className="flex flex-wrap gap-2">
@@ -72,7 +72,7 @@ const ProjectsBento: React.FC = () => {
 
         {visible.length === 0 ? (
           <p className="font-mono text-sm text-on-surface-variant">
-            No projects in this filter—try &quot;All&quot;.
+            No projects in this filter - try &quot;All&quot;.
           </p>
         ) : (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
@@ -189,7 +189,7 @@ const ProjectsBento: React.FC = () => {
                   </span>
                 </div>
                 <h3 className="mb-2 font-headline text-xl font-bold text-on-surface">
-                  SUNY_ALBANY · NUST
+                  SUNY_ALBANY | NUST
                 </h3>
                 <p className="text-xs leading-relaxed text-on-surface-variant">
                   M.S. Computer Science (AI), expected May 2027. B.S. Software
@@ -212,3 +212,4 @@ const ProjectsBento: React.FC = () => {
 };
 
 export default ProjectsBento;
+

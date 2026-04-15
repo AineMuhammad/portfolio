@@ -2,14 +2,15 @@ export const profile = {
   name: "Ain e Muhammad",
   brand: "AIN.E_OS",
   title: "Senior Software Engineer",
-  tagline: "Full-Stack · AI & 3D Systems",
+  tagline: "Full-Stack | AI & 3D Systems",
   email: "ainemuhammad903@gmail.com",
   phone: "+1 (518) 542-9640",
   location: "Albany, NY",
-  coords: "Lat: 42.6526° N, Long: 73.7562° W",
+  coords: "Lat: 42.6526 N, Long: 73.7562 W",
   github: "https://github.com/ainemuhammad",
   linkedin: "https://www.linkedin.com/in/ain-e-muhammad-a32a401a0",
   portfolio: "https://ainemuhammad.github.io/portfolio",
+  resumeAssetPath: "/portfolio/Resume.pdf",
   formspree: "https://formspree.io/f/xpwldode",
 };
 
@@ -17,16 +18,16 @@ export const heroCopy = {
   status: "Status: System Online // Impact Phase",
   headlineBefore: "BUILDING THE",
   headlineGradient: "NEXT GENERATION",
-  headlineAfter: "OF AI & 3D SYSTEMS",
+  headlineAfter: "OF AI & 3D SYSTEMS ON THE WEB",
   sub:
-    "Full-stack platforms with React and Python, serverless AWS, generative AI and computer vision pipelines, and real-time 3D configurators—where precision meets scalable delivery.",
+    "Web-first full-stack platforms with React and Python, serverless AWS, generative AI and computer vision pipelines, and real-time 3D configurators - where precision meets scalable delivery.",
 };
 
 export const stats = [
   { value: "5+", label: "Years engineering" },
-  { value: "3×", label: "Gen-AI pipeline output" },
+  { value: "3x", label: "Gen-AI pipeline output" },
   { value: "~35%", label: "Load-time win (high load)" },
-  { value: "M.S.", label: "AI · Expected 2027" },
+  { value: "M.S.", label: "AI | Expected 2027" },
 ];
 
 export const capabilities = [
@@ -46,7 +47,7 @@ export const capabilities = [
     icon: "cloud_done",
     step: "",
     title: "Scale",
-    body: "AWS Lambda, API Gateway, S3, RDS/PostgreSQL, CloudFront—serverless systems built for concurrency and low latency.",
+    body: "AWS Lambda, API Gateway, S3, RDS/PostgreSQL, CloudFront - serverless systems built for concurrency and low latency.",
     tags: [],
     glass: false,
   },
@@ -56,7 +57,7 @@ export const capabilities = [
     icon: "data_object",
     step: "",
     title: "Core",
-    body: "React, TypeScript, Node.js, Material UI, SWR—streaming assets, lazy loading, and resilient APIs.",
+    body: "React, TypeScript, Node.js, Material UI, SWR - streaming assets, lazy loading, resilient APIs, and strong data validation patterns.",
     tags: [],
     glass: false,
   },
@@ -75,7 +76,7 @@ export const capabilities = [
 export const missionBlurb = {
   title: "Mission-critical delivery",
   body:
-    "I lead cross-functional delivery for enterprise 3D and AI products—requirements through demos—while mentoring engineers and tightening architecture, reviews, and CI/CD.",
+    "I lead cross-functional delivery for enterprise web, 3D, and AI products - requirements through demos - while mentoring engineers and tightening architecture, reviews, and CI/CD.",
   cta: "Scroll to chronology",
   href: "#mastery",
 };
@@ -95,20 +96,20 @@ export const projects = [
     id: "ems",
     layout: "large" as const,
     title: "EMPLOYEE_MGMT_SYS",
-    subtitle: "Full-stack · CSV · RBAC",
+    subtitle: "Full-stack | CSV | RBAC",
     description:
       "Lead developer on a React, Node.js, and MySQL system with CSV user import, admin dashboards, and role-based access control.",
     tags: ["React", "Node.js", "MySQL"],
     categories: ["full-stack", "admin"] satisfies ProjectFacet[],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuD6GUXl6zrTV_Mss5Hef_D84Dnf7tAlgLWO5v25GpyTYtaQ1D0gfCMZTI4f2OCOEFvfajg1bVASoVxARcuQ80VdQGQsTCHHSRbv6Aw4UKpJA15xax623eXHfPckCD2qem-paJlqUFrIK3THxdb9NInkUXXPeLuw6t12WkGLca5oQlaKyPkKwSa1_C-VLFv-h34TngBTVdh49czTevJYd2pHpD2qC1atXpZOoKflqrevGVw7M35aYOe0mgFL1-Cw5Yf4uFUS8TJDIYY",
-    imageAlt: "Abstract data visualization — dark grid with cyan and violet light",
+    imageAlt: "Abstract data visualization - dark grid with cyan and violet light",
   },
   {
     id: "health",
     layout: "tall" as const,
     title: "HEALTH_ADMIN_PORTAL",
-    subtitle: "React · MUI · SWR",
+    subtitle: "React | MUI | SWR",
     description:
       "Material UI and SWR portal with drag-and-drop ordering, analytics dashboards, full CRUD, and secure image uploads.",
     tags: ["Material UI", "SWR", "Analytics"],
@@ -136,8 +137,8 @@ export const timeline: TimelineEntry[] = [
   {
     id: "suny",
     title: "Graduate Grader",
-    org: "SUNY Albany · Discrete Structures",
-    period: "Jan 2026 – Present",
+    org: "SUNY Albany | Discrete Structures",
+    period: "Jan 2026 - Present",
     side: "left",
     border: "primary",
     icon: "school",
@@ -151,27 +152,29 @@ export const timeline: TimelineEntry[] = [
   },
   {
     id: "all3d-lead",
-    title: "Technical Lead (AI & 3D)",
-    org: "ALL3D · Remote",
-    period: "Apr 2024 – Aug 2025",
+    title: "Lead Software Engineer",
+    org: "ALL3D | San Francisco (Remote)",
+    period: "Apr 2024 - Aug 2025",
     side: "right",
     border: "secondary",
     icon: "neurology",
     summary:
-      "Led enterprise 3D configurators (Walmart, Rough Country, Telescope Casual); generative AI + 3D pipelines; React Three Fiber performance; team leadership.",
-    tags: ["R3F", "Generative AI", "AWS"],
+      "Led enterprise 3D configurators and AI-enhanced production pipelines across web delivery, stakeholder demos, and team execution.",
+    tags: ["R3F", "Generative AI", "Leadership"],
     details: [
-      "Client-facing demos, requirements, and end-to-end delivery ownership.",
-      "GPU-friendly R3F pipelines: GLTF compression, LOD, and load-time optimization.",
-      "CV preprocessing (segmentation, depth, masking) for higher realism in generated imagery.",
-      "Mentorship, architecture reviews, and generative model integration (Nano Banana + custom).",
+      "Client-facing technical leadership for Walmart, Rough Country, and Telescope Casual from requirements through demos and delivery.",
+      "Introduced coding standards, reusable patterns, and documentation that improved onboarding and long-term maintainability.",
+      "Built GPU-friendly R3F rendering systems using GLTF compression and LOD to improve performance and load times.",
+      "Designed AI-3D orchestration workflows for ingestion, preprocessing, inference, and post-processing at production scale.",
+      "Applied CV preprocessing (segmentation, masking, depth estimation) and integrated Nano Banana/custom models for higher visual quality.",
+      "Mentored engineers, led code reviews, and strengthened reliability through clearer architecture and execution ownership.",
     ],
   },
   {
     id: "all3d-sr",
     title: "Senior Software Engineer",
-    org: "ALL3D · Remote",
-    period: "Feb 2023 – Apr 2024",
+    org: "ALL3D | Remote",
+    period: "Feb 2023 - Apr 2024",
     side: "left",
     border: "primary",
     icon: "cloud",
@@ -188,8 +191,8 @@ export const timeline: TimelineEntry[] = [
   {
     id: "all3d-se",
     title: "Software Engineer",
-    org: "ALL3D · Remote",
-    period: "May 2021 – Feb 2023",
+    org: "ALL3D | Remote",
+    period: "May 2021 - Feb 2023",
     side: "right",
     border: "secondary",
     icon: "layers",
@@ -207,7 +210,7 @@ export const timeline: TimelineEntry[] = [
     id: "sanje",
     title: "Frontend Developer",
     org: "Sanje Solutions",
-    period: "Jun 2020 – Oct 2020",
+    period: "Jun 2020 - Oct 2020",
     side: "left",
     border: "primary",
     icon: "web",
@@ -222,8 +225,8 @@ export const timeline: TimelineEntry[] = [
   {
     id: "nust",
     title: "Research Engineer",
-    org: "NUST · AI & Web Systems",
-    period: "Jun 2019 – Oct 2019",
+    org: "NUST | AI & Web Systems",
+    period: "Jun 2019 - Oct 2019",
     side: "right",
     border: "secondary",
     icon: "hub",
@@ -259,7 +262,7 @@ export const coreArchitectures: Array<{
     title: "Distributed & serverless",
     icon: "hub",
     accent: "primary",
-    body: "Lambda, API Gateway, RDS, S3, CloudFront—structured validation, error handling, and high-concurrency patterns.",
+    body: "Lambda, API Gateway, RDS, S3, CloudFront - structured validation, error handling, and high-concurrency patterns.",
   },
   {
     span: "",
@@ -274,3 +277,6 @@ export const coreArchitectures: Array<{
     list: ["DOCKER", "CI_CD", "JEST_PYTEST"],
   },
 ];
+
+
+

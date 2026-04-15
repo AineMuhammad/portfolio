@@ -25,7 +25,7 @@ const ContactSection: React.FC = () => {
           </h2>
           <p className="max-w-md font-body text-lg leading-relaxed text-on-surface-variant">
             Collaborations, architecture reviews, or full-stack / AI
-            opportunities—reach out via the form or links below.
+            opportunities - reach out via the form or links below.
           </p>
 
           <div className="mt-12 space-y-4">
@@ -74,7 +74,7 @@ const ContactSection: React.FC = () => {
               </a>
             </div>
             <p className="pt-4 font-mono text-sm text-on-surface-variant">
-              {profile.email} · {profile.phone}
+              {profile.email} | {profile.phone}
             </p>
           </div>
         </div>
@@ -184,3 +184,4 @@ const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
+

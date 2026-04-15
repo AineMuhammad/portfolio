@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Must match theme `background` — prevents white gaps on overscroll / scroll */
+/* Must match theme `background`  -  prevents white gaps on overscroll / scroll */
 @layer base {
   html {
     @apply bg-background text-on-background;
@@ -92,3 +92,4 @@
     transparent
   );
 }
+

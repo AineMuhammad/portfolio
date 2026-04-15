@@ -13,7 +13,7 @@ const PROMPT = "ain.e@portfolio:~$";
 const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
   const reduced = usePrefersReducedMotion();
   const [lines, setLines] = useState<string[]>([
-    "AIN.E_OS shell — type `help` for commands.",
+    "AIN.E_OS shell - type `help` for commands.",
   ]);
   const [input, setInput] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
@@ -43,7 +43,7 @@ const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
       switch (cmd) {
         case "help":
           push(
-            "commands: help · clear · story · projects · mastery · connect · github · linkedin · email · resume · exit"
+            "commands: help | clear | story | projects | mastery | connect | github | linkedin | email | resume | exit"
           );
           break;
         case "clear":
@@ -80,7 +80,7 @@ const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
         case "resume":
           {
             const a = document.createElement("a");
-            a.href = "/Portfolio/Resume.pdf";
+            a.href = `${process.env.PUBLIC_URL}${profile.resumeAssetPath}`;
             a.download = "";
             a.click();
           }
@@ -91,7 +91,7 @@ const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
           onClose();
           break;
         default:
-          push(`command not found: ${cmd.split(/\s+/)[0]} — try help`);
+          push(`command not found: ${cmd.split(/\s+/)[0]} - try help`);
       }
     },
     [onClose, push]
@@ -159,3 +159,4 @@ const TerminalDrawer: React.FC<TerminalDrawerProps> = ({ open, onClose }) => {
 };
 
 export default TerminalDrawer;
+

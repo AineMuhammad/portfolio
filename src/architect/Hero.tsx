@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </p>
 
           <p className="mb-8 font-headline text-sm uppercase tracking-widest text-outline">
-            {profile.name} · {profile.location}
+            {profile.name}  |  {profile.location}
           </p>
 
           <div className="flex flex-wrap gap-4">

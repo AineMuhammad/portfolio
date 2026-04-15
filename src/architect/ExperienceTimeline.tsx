@@ -32,7 +32,7 @@ const ExperienceTimeline: React.FC = () => {
             </h2>
             <p className="max-w-xl font-body text-lg leading-relaxed text-on-surface-variant md:text-xl">
               Enterprise 3D and AI delivery, serverless backends, and research
-              foundations—chronological audit of roles and systems shipped.
+              foundations - chronological audit of roles and systems shipped.
             </p>
           </div>
           <div className="hidden text-right md:block">
@@ -130,7 +130,7 @@ const ExperienceTimeline: React.FC = () => {
                               )}
                               aria-expanded={isOpen}
                             >
-                              {isOpen ? "− Hide details" : "+ Details"}
+                              {isOpen ? "- Hide details" : "+ Details"}
                             </button>
                             {isOpen ? (
                               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-on-surface-variant">
@@ -243,3 +243,4 @@ const ExperienceTimeline: React.FC = () => {
 };
 
 export default ExperienceTimeline;
+

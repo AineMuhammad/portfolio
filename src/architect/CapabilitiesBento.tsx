@@ -17,7 +17,7 @@ const CapabilitiesBento: React.FC = () => {
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-transparent" />
           </div>
           <p className="max-w-md text-right font-body text-on-surface-variant">
-            Modular engineering: AI, cloud, full-stack, and 3D—optimized for
+            Modular engineering: AI, cloud, full-stack, and 3D - optimized for
             impact and low latency.
           </p>
         </div>
@@ -118,3 +118,4 @@ const CapabilitiesBento: React.FC = () => {
 };
 
 export default CapabilitiesBento;
+

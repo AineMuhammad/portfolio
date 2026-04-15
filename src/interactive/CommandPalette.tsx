@@ -70,7 +70,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
         label: "Open resume (download)",
         run: () => {
           const a = document.createElement("a");
-          a.href = "/Portfolio/Resume.pdf";
+          a.href = `${process.env.PUBLIC_URL}${profile.resumeAssetPath}`;
           a.download = "";
           a.click();
           onClose();
@@ -164,11 +164,11 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Type a command…"
+            placeholder="Type a command..."
             className="w-full bg-transparent font-mono text-sm text-on-surface outline-none placeholder:text-on-surface-variant"
           />
           <p className="mt-1 font-mono text-[10px] text-on-surface-variant">
-            ↑↓ navigate · enter run · esc close · ctrl+k
+            up/down navigate | enter run | esc close | ctrl+k
           </p>
         </div>
         <ul className="max-h-72 overflow-y-auto py-2">

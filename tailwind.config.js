@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         "surface-container-highest": "#262626",
-        /* Was #adaaaa — lifted for WCAG-friendly body/secondary text on #0e0e0e */
+        /* Was #adaaaa â€” lifted for WCAG-friendly body/secondary text on #0e0e0e */
         "on-surface-variant": "#c9c7c5",
         "primary-fixed-dim": "#00deec",
         "outline-variant": "#5c5a58",
@@ -73,3 +73,4 @@ module.exports = {
   },
   plugins: [],
 };
+

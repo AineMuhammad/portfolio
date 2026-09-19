@@ -5,8 +5,8 @@ export const profile = {
   email: 'ainemuhammad903@gmail.com',
   phone: '+1 (518) 542-9640',
   links: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    linkedin: 'https://linkedin.com/in/ain-m',
+    github: 'https://github.com/AineMuhammad',
   },
   summary:
     'Senior Software Engineer (6 years) specializing in full-stack web development — React.js, Node.js, TypeScript, and Python — with serverless AWS architectures (Lambda, API Gateway, RDS/PostgreSQL) supporting high-concurrency, low-latency products. Experienced across the full engineering lifecycle: CRUD-heavy application architecture, automated testing, containerized CI/CD pipelines, and service-boundary/system design decisions. Additional depth in real-time 3D/WebGL front-ends and generative 3D pipelines. Currently pursuing an M.S. in Computer Science (AI) at SUNY Albany.',

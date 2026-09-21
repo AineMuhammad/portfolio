@@ -129,14 +129,44 @@ export const experience: Role[] = [
 ]
 
 export type Project = {
-  id: 'time-capsule' | 'guestbook' | 'story-weaving' | 'leaf-lab' | 'chatilm'
+  id: 'time-capsule' | 'guestbook' | 'story-weaving' | 'leaf-lab' | 'chatilm' | 'togetherlist' | 'moviematch'
   name: string
   stack: string
   description: string
   bullets: string[]
+  repo?: string
+  live?: string
 }
 
 export const projects: Project[] = [
+  {
+    id: 'togetherlist',
+    name: 'TogetherList',
+    stack: 'Next.js, React, TypeScript, PostgreSQL, Prisma, Auth.js, Tailwind CSS',
+    description:
+      'A shared grocery list and weekly meal planner for households, where checking off an item on one phone updates everyone else’s within seconds and planned meals can generate the shopping list.',
+    bullets: [
+      'Auth.js sign-in (Google OAuth + email/password) with multi-household support via join codes',
+      'SWR-polled live sync with optimistic updates and rollback on server rejection',
+      'Ingredient merging that combines quantities across planned meals; Jest unit and Playwright e2e tests, CI on GitHub Actions',
+    ],
+    repo: 'https://github.com/AineMuhammad/TogetherList',
+    live: 'https://togetherlist-one.vercel.app',
+  },
+  {
+    id: 'moviematch',
+    name: 'MovieMatch',
+    stack: 'Next.js, TypeScript, PostgreSQL, Prisma, TMDB API, Framer Motion',
+    description:
+      'A group movie picker: everyone in a room swipes yes/no on the same stack of movies, and the app announces a match with an embedded trailer the instant everyone likes the same one.',
+    bullets: [
+      'Drag-to-swipe cards with Framer Motion and live room / vote state via SWR polling',
+      'Shareable 6-character room codes with genre and region filters; Vercel Cron job expires rooms after 24 hours',
+      'Google OAuth + email/password auth, Jest unit and Playwright e2e tests',
+    ],
+    repo: 'https://github.com/AineMuhammad/moviematch',
+    live: 'https://moviematch-sooty.vercel.app',
+  },
   {
     id: 'time-capsule',
     name: 'Time Capsule',
@@ -148,6 +178,8 @@ export const projects: Project[] = [
       'Per-IP rate limiting',
       'Input validation on message and date submission',
     ],
+    repo: 'https://github.com/AineMuhammad/time-capsule',
+    live: 'https://timecapsule-seven-eta.vercel.app',
   },
   {
     id: 'guestbook',
@@ -160,6 +192,7 @@ export const projects: Project[] = [
       'Per-IP rate limiting',
       'Cached SVG rendering to keep the page fast as entries scale',
     ],
+    repo: 'https://github.com/AineMuhammad/self-painting-guestbook',
   },
   {
     id: 'story-weaving',
@@ -171,6 +204,8 @@ export const projects: Project[] = [
       'Per-IP rate limiting and spam filtering',
       'Automatic chapter rollover once a story reaches its length cap',
     ],
+    repo: 'https://github.com/AineMuhammad/story-weaving',
+    live: 'https://story-weaving.vercel.app',
   },
   {
     id: 'leaf-lab',
@@ -179,6 +214,8 @@ export const projects: Project[] = [
     description:
       'An interactive educational web app teaching kids photosynthesis through a hands-on simulation.',
     bullets: ['Automated GitHub Actions deployment pipeline to GitHub Pages'],
+    repo: 'https://github.com/AineMuhammad/leaf-lab',
+    live: 'https://ainemuhammad.github.io/leaf-lab/',
   },
   {
     id: 'chatilm',

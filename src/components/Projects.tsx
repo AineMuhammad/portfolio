@@ -141,6 +141,69 @@ function StoryGlyph({ inView }: { inView: boolean }) {
   )
 }
 
+function ListGlyph({ inView }: { inView: boolean }) {
+  return (
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      {[0, 1, 2].map((i) => (
+        <g key={i}>
+          <motion.path
+            d={`M4 ${9 + i * 8} l3 3 l5 -6`}
+            stroke="var(--color-accent-warm)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{ pathLength: 0 }}
+            animate={inView ? { pathLength: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.2 + i * 0.2 }}
+          />
+          <motion.path
+            d={`M17 ${9 + i * 8} H30`}
+            stroke="var(--color-ink-faint)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={inView ? { pathLength: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.3 + i * 0.2 }}
+          />
+        </g>
+      ))}
+    </svg>
+  )
+}
+
+function MatchGlyph({ inView }: { inView: boolean }) {
+  return (
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <motion.rect
+        x="5"
+        y="7"
+        width="16"
+        height="20"
+        rx="2.5"
+        stroke="var(--color-ink)"
+        strokeWidth="2"
+        initial={{ rotate: 0, x: 4, opacity: 0 }}
+        animate={inView ? { rotate: -10, x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
+      />
+      <motion.rect
+        x="13"
+        y="7"
+        width="16"
+        height="20"
+        rx="2.5"
+        stroke="var(--color-accent-warm)"
+        strokeWidth="2"
+        initial={{ rotate: 0, x: -4, opacity: 0 }}
+        animate={inView ? { rotate: 10, x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
+      />
+    </svg>
+  )
+}
+
 function glyphFor(id: Project['id'], inView: boolean) {
   switch (id) {
     case 'time-capsule':
@@ -153,6 +216,10 @@ function glyphFor(id: Project['id'], inView: boolean) {
       return <BenchmarkGlyph inView={inView} />
     case 'story-weaving':
       return <StoryGlyph inView={inView} />
+    case 'togetherlist':
+      return <ListGlyph inView={inView} />
+    case 'moviematch':
+      return <MatchGlyph inView={inView} />
   }
 }
 
@@ -231,6 +298,30 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </motion.li>
         ))}
       </ul>
+
+      {project.repo || project.live ? (
+        <div
+          style={{
+            display: 'flex',
+            gap: '1.25rem',
+            marginTop: 'auto',
+            paddingTop: '0.75rem',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.75rem',
+          }}
+        >
+          {project.live ? (
+            <a href={project.live} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-warm)' }}>
+              Live site ↗
+            </a>
+          ) : null}
+          {project.repo ? (
+            <a href={project.repo} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-warm)' }}>
+              GitHub ↗
+            </a>
+          ) : null}
+        </div>
+      ) : null}
     </motion.article>
   )
 }
